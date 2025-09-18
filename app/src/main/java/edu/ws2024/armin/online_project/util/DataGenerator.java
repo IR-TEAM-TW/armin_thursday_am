@@ -11,6 +11,7 @@ import java.util.List;
 import edu.ws2024.armin.online_project.R;
 import edu.ws2024.armin.online_project.adapter.HomeAdapter;
 import edu.ws2024.armin.online_project.adapter.ProfileAdapter;
+import edu.ws2024.armin.online_project.data.Category;
 import edu.ws2024.armin.online_project.data.Data;
 
 public class DataGenerator {
@@ -33,5 +34,15 @@ public class DataGenerator {
             ));
             recyclerView.setAdapter(adapter);
         }
+    }
+
+    public static ArrayList<Category> GetRandomCategories() {
+        ArrayList<Category> categories = new ArrayList<>();
+        categories.add(new Category("تفننی", 0));
+        categories.add(new Category("ایرانی", 1));
+        categories.add(new Category("کودک", 2));
+        categories.add(new Category("رانندگی", 3));
+
+        return categories;
     }
 }
