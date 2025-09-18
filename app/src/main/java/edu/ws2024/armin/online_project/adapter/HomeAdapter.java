@@ -12,15 +12,15 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 import edu.ws2024.armin.online_project.R;
-import edu.ws2024.armin.online_project.data.HomeData;
+import edu.ws2024.armin.online_project.data.Data;
 import edu.ws2024.armin.online_project.databinding.HomeListItemBinding;
 
 public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
 
     private Context context;
-    private List<HomeData> allData;
+    private List<Data> allData;
 
-    public HomeAdapter(Context context, List<HomeData> allData) {
+    public HomeAdapter(Context context, List<Data> allData) {
         this.context = context;
         this.allData = allData;
     }
@@ -39,7 +39,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        HomeData data = allData.get(position);
+        Data data = allData.get(position);
         holder.binding.txtItem.setText(data.getName());
         holder.binding.itemImage.setImageResource(data.getImage());
     }
